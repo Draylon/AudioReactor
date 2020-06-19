@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BE79FA7F-AD7F-456B-853A-6310202671BC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AudioReactorUI</RootNamespace>
+    <AssemblyName>AudioReactorUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AREntity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AREntity.Designer.cs">
+      <DependentUpon>AREntity.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AREntity.resx">
+      <DependentUpon>AREntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Form1Backup.csc">
+      <SubType>Form</SubType>
+    </None>
+    <Compile Include="audioreactorinterface.cs" />
+    <Compile Include="PromptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PromptForm.Designer.cs">
+      <DependentUpon>PromptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prompt1.cs" />
+    <Compile Include="DLLitem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DLLitem.Designer.cs">
+      <DependentUpon>DLLitem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ARUForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARUForm.Designer.cs">
+      <DependentUpon>ARUForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ARUForm.resx">
+      <DependentUpon>ARUForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DLLitem.resx">
+      <DependentUpon>DLLitem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PromptForm.resx">
+      <DependentUpon>PromptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NAudio" Version="1.10.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AudioReactorLib\AudioReactorLib.csproj">
+      <Project>{CCA0BD98-47B5-45BA-AE17-F56AC456DAD5}</Project>
+      <Name>AudioReactorLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="libfftw3-3.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\toolboxCorner_L.png" />
+    <Content Include="Resources\toolboxCorner_R.png" />
+    <None Include="Resources\WindowTitle.png" />
+    <None Include="Resources\4K-Mountains-Landscape-Twilight-Wallpaper-3840x2160.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
