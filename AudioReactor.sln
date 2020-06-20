@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioReactorLib", "AudioRea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioReactorUI", "AudioReactorUI\AudioReactorUI.csproj", "{BE79FA7F-AD7F-456B-853A-6310202671BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawingSystem", "AudioReactorCore\DrawingSystem.csproj", "{015CFC2C-50DC-4A96-83B3-BF68DB36EE05}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawingSystem", "DrawingSystem\DrawingSystem.csproj", "{015CFC2C-50DC-4A96-83B3-BF68DB36EE05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
