@@ -9,6 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioReactorUI", "AudioReac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawingSystem", "DrawingSystem\DrawingSystem.csproj", "{015CFC2C-50DC-4A96-83B3-BF68DB36EE05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsolePrintOut_plugin", "ConsolePrintOut_plugin\ConsolePrintOut_plugin.csproj", "{3794C01E-9AC4-400B-B041-2B30D2711489}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D4A86B4D-87D3-479F-8550-B758CCD3811E}"
+	ProjectSection(SolutionItems) = preProject
+		DLLCALL_INTERFACE.cs = DLLCALL_INTERFACE.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +62,18 @@ Global
 		{015CFC2C-50DC-4A96-83B3-BF68DB36EE05}.Release|x64.Build.0 = Release|Any CPU
 		{015CFC2C-50DC-4A96-83B3-BF68DB36EE05}.Release|x86.ActiveCfg = Release|Any CPU
 		{015CFC2C-50DC-4A96-83B3-BF68DB36EE05}.Release|x86.Build.0 = Release|Any CPU
+		{3794C01E-9AC4-400B-B041-2B30D2711489}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3794C01E-9AC4-400B-B041-2B30D2711489}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3794C01E-9AC4-400B-B041-2B30D2711489}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3794C01E-9AC4-400B-B041-2B30D2711489}.Debug|x64.Build.0 = Debug|Any CPU
+		{3794C01E-9AC4-400B-B041-2B30D2711489}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3794C01E-9AC4-400B-B041-2B30D2711489}.Debug|x86.Build.0 = Debug|Any CPU
+		{3794C01E-9AC4-400B-B041-2B30D2711489}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3794C01E-9AC4-400B-B041-2B30D2711489}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3794C01E-9AC4-400B-B041-2B30D2711489}.Release|x64.ActiveCfg = Release|Any CPU
+		{3794C01E-9AC4-400B-B041-2B30D2711489}.Release|x64.Build.0 = Release|Any CPU
+		{3794C01E-9AC4-400B-B041-2B30D2711489}.Release|x86.ActiveCfg = Release|Any CPU
+		{3794C01E-9AC4-400B-B041-2B30D2711489}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

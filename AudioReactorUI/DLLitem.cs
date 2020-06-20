@@ -199,8 +199,8 @@ namespace AudioReactorUI {
         }
         public void setClassType(){
             try {
-                Console.WriteLine("Looking for "+dllName+ ".AudioReactorPlugin");
-                _classType=_assembly.GetType(String.Format("{0}.{1}",dllName, "AudioReactorPlugin"));
+                Console.WriteLine("Looking for "+dllName+ "."+ dllName);
+                _classType=_assembly.GetType(String.Format("{0}.{1}", dllName, dllName));
             } catch(Exception e) { Console.WriteLine("Error getting type " + dllName + ". \n" + e); }
         }
         private void setDllInstance() {
@@ -208,8 +208,10 @@ namespace AudioReactorUI {
                 // Create class instance.
                 try {
                     _dllInstance = Activator.CreateInstance(classType);
-                    _dllInstance.stonks();
-                }catch(Microsoft.CSharp.RuntimeBinder.RuntimeBinderException e) {
+                    if (_dllInstance is DLLCall) {} else {
+                        throw new InterfaceNotImplemented("Interface não foi implementada no plugin!!");
+                    }
+                } catch(Microsoft.CSharp.RuntimeBinder.RuntimeBinderException e) {
                     Console.WriteLine("Couldn't find function:\n"+e);
                 }catch(Exception e) {
                     Console.WriteLine(e);

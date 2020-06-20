@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace DrawingSystem {
 
-    public partial class DrawingSystem : Form{
+    public partial class DrawingSystem : Form,DLLCall{
         private bool drawFree;
         private bool hidden=false;
         public DrawingSystem() {
@@ -12,8 +12,25 @@ namespace DrawingSystem {
             InitializeComponent();
             drawFree = true;
         }
+        public void dispose() {
+            this.Dispose();
+        }
         public void setup() {
+            Console.WriteLine("Setup called");
+        }
+        
+        public void stonks() {
+            Console.WriteLine("Stonks indeed");
+        }
+        public void showForm() {
+            this.Show();
+        }
+        public void hideForm() {
+            this.Hide();
+        }
 
+        public void fps(short fps) {
+            throw new NotImplementedException();
         }
         public void loop(double[] d){
             if (drawFree && !hidden){
@@ -57,32 +74,6 @@ namespace DrawingSystem {
 
         private void chart2_Click(object sender, EventArgs e) {
 
-        }
-    }
-
-    public class AudioReactorPlugin : DLLCall {
-        DrawingSystem dinst;
-        public AudioReactorPlugin() {
-            Console.WriteLine("Plugin constructor called");
-            dinst = new DrawingSystem();
-        }
-        public void dispose() {
-            dinst.Dispose();
-        }
-        public void setup() {
-            Console.WriteLine("Setup called");
-        }
-        public void loop(double[] d) {
-            dinst.loop(d);
-        }
-        public void stonks() {
-            Console.WriteLine("Stonks indeed");
-        }
-        public void showForm() {
-            dinst.Show();
-        }
-        public void hideForm() {
-            dinst.Hide();
         }
     }
 }

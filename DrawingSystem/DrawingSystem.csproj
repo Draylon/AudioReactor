@@ -54,7 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="audioreactorinterface.cs" />
+    <Compile Include="DLLCALL_INTERFACE.cs" />
     <Compile Include="DrawingSystem.cs">
       <SubType>Form</SubType>
     </Compile>

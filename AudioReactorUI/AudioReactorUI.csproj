@@ -60,7 +60,8 @@
     <None Include="Form1Backup.csc">
       <SubType>Form</SubType>
     </None>
-    <Compile Include="audioreactorinterface.cs" />
+    <Compile Include="DLLCALL_INTERFACE.cs" />
+    <Compile Include="Exceptions\InterfaceNotImplemented.cs" />
     <Compile Include="PromptForm.cs">
       <SubType>Form</SubType>
     </Compile>
